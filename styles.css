@@ -338,6 +338,7 @@ body.game-page::before {
   pointer-events: none;
 }
 
+/* --- Background Blobs --- */
 .game-page .background-shapes { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
 .game-page .blob { position: absolute; width: 350px; height: 350px; border-radius: 50%; opacity: 0.20; filter: blur(60px); animation: floaty 15s ease-in-out infinite; }
 .game-page .blob1 { background: #ff6b6b; top: 10%; left: 5%; animation-delay: 0s; }
@@ -346,6 +347,7 @@ body.game-page::before {
 .game-page .blob4 { background: #a066ff; top: 80%; left: 20%; animation-delay: 6s; }
 @keyframes floaty { 0%, 100% { transform: translateY(0px) scale(1); } 50% { transform: translateY(-40px) scale(1.2); } }
 
+/* --- UI Elements --- */
 .game-page .exit-btn {
   position: fixed;
   top: 20px;
@@ -388,7 +390,7 @@ body.game-page::before {
   transition: width 0.5s ease-in-out;
 }
 
-/* Text styles */
+/* --- Text Styles --- */
 .game-page .game-instructions, .game-page .reveal-message {
   font-size: 30px;
   margin: 20px auto;
@@ -397,35 +399,13 @@ body.game-page::before {
   max-width: 600px;
   position: relative;
   z-index: 2;
-  text-align: center; /* ADDED this to center the instruction text */
+  text-align: center;
 }
 .game-page .reveal-message {
   font-weight: bold;
-  text-align: center;
 }
 
-/* ... (the rest of your game page styles remain the same) ... */
-
-
-/* Responsive Design for Game Page */
-@media (max-width: 800px) {
-  /* This is the key change for the card layout */
-  .game-page .card {
-    width: 45%; /* CHANGED from 90% to allow two cards to fit side-by-side */
-    max-width: 180px; /* Prevents them from being too large on tablets */
-  }
-
-  .game-page .card-container {
-    /* REMOVED flex-direction: column; to keep the cards in a row */
-    gap: 15px; /* Reduced the gap for smaller screens */
-  }
-}
-
-.game-page .reveal-message {
-  font-weight: bold;
-  text-align: center;
-}
-
+/* --- Card Styles --- */
 .game-page .card-container {
   display: flex;
   justify-content: center;
@@ -457,12 +437,12 @@ body.game-page::before {
   box-shadow: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .game-page .final-card:hover {
   transform: scale(1.1);
   box-shadow: 0 0 40px var(--color-accent-primary), 0 0 20px var(--color-accent-primary);
 }
 
+/* --- Card Animations --- */
 .game-page .card-chosen { animation: scaleUp 0.5s forwards; }
 .game-page .card-discarded { animation: fadeOut 0.5s forwards; }
 .game-page .card-fade-in { animation: fadeIn 0.4s forwards; }
@@ -470,6 +450,7 @@ body.game-page::before {
 @keyframes fadeOut { to { opacity: 0; transform: scale(0.9); } }
 @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
 
+/* --- End-game Buttons --- */
 .game-page .end-game-buttons {
   display: flex;
   justify-content: center;
@@ -496,6 +477,17 @@ body.game-page::before {
   background-color: #000;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* --- Responsive Design for Game Page --- */
+@media (max-width: 800px) {
+  .game-page .card {
+    width: 45%;
+    max-width: 180px;
+  }
+  .game-page .card-container {
+    gap: 15px;
+  }
 }
 
 /* ==========================================================================
