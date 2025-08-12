@@ -388,6 +388,7 @@ body.game-page::before {
   transition: width 0.5s ease-in-out;
 }
 
+/* Text styles */
 .game-page .game-instructions, .game-page .reveal-message {
   font-size: 30px;
   margin: 20px auto;
@@ -396,6 +397,28 @@ body.game-page::before {
   max-width: 600px;
   position: relative;
   z-index: 2;
+  text-align: center; /* ADDED this to center the instruction text */
+}
+.game-page .reveal-message {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ... (the rest of your game page styles remain the same) ... */
+
+
+/* Responsive Design for Game Page */
+@media (max-width: 800px) {
+  /* This is the key change for the card layout */
+  .game-page .card {
+    width: 45%; /* CHANGED from 90% to allow two cards to fit side-by-side */
+    max-width: 180px; /* Prevents them from being too large on tablets */
+  }
+
+  .game-page .card-container {
+    /* REMOVED flex-direction: column; to keep the cards in a row */
+    gap: 15px; /* Reduced the gap for smaller screens */
+  }
 }
 
 .game-page .reveal-message {
@@ -475,10 +498,6 @@ body.game-page::before {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-@media (max-width: 800px) {
-  .game-page .card { width: 90%; }
-  .game-page .card-container { flex-direction: column; gap: 20px; }
-}
 /* ==========================================================================
    4. MODAL STYLES (for Archetype Pop-up)
    ========================================================================== */
