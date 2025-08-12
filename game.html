@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <title>Game in Progress | What's Your Superpower?</title>
+
+    <meta name="description" content="Take the test! An interactive card game from VK Transformation to discover your unique professional superpower.">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <meta property="og:title" content="What's Your Superpower? | VK Transformation">
+    <meta property="og:description" content="An interactive card game to discover your unique professional strengths and foster team synergy.">
+    <meta property="og:image" content="https://your-website-url.com/Images/Banner1.png">
+    <meta property="og:url" content="https://your-website-url.com/game.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What's Your Superpower? | VK Transformation">
+    <meta name="twitter:description" content="An interactive card game to discover your unique professional strengths and foster team synergy.">
+    <meta name="twitter:image" content="https://your-website-url.com/Images/Banner1.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="game-page">
+    <div class="background-shapes">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+        <div class="blob blob4"></div>
+    </div>
+
+    <a href="index.html" class="exit-btn" title="Back to Home">&times;</a>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
+    <p class="game-instructions" id="instructions">Click on the card that feels most like you!</p>
+    <p class="reveal-message" id="reveal" style="display: none;">CONGRATULATIONS! <br> You’ve found your superpower!</p>
+
+    <div class="card-and-button">
+        <div class="card-container">
+            <img src="cards/1%282%29.png" alt="Card 1" class="card" id="card1" />
+            <img src="cards/2%282%29.png" alt="Card 2" class="card" id="card2" />
+        </div>
+        <div class="end-game-buttons" id="endGameButtons" style="display: none;">
+            <button id="play-again" class="play-again-btn">Play Again</button>
+            <a href="index.html" id="back-home" class="play-again-btn">Back to Home</a>
+        </div>
+    </div>
+<script src="game.js" defer></script>
+</body>
+</html>
