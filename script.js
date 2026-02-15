@@ -274,6 +274,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // ---------- NYP PHOTOGRAPHY CLUB PROJECT MODAL ----------
+    const photoClubModal = document.getElementById('photoClubModal');
+    const openPhotoClubBtn = document.getElementById('openPhotoClubModal');
+    const closePhotoClubBtn = document.getElementById('closePhotoClubModal');
+
+    openPhotoClubBtn.addEventListener('click', () => {
+        photoClubModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closePhotoClubBtn.addEventListener('click', () => {
+        photoClubModal.classList.remove('open');
+        document.body.style.overflow = '';
+    });
+
+    // Close on backdrop click
+    photoClubModal.addEventListener('click', (e) => {
+        if (e.target === photoClubModal) {
+            photoClubModal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+    });
+
     // ---------- PHOTO LIGHTBOX ----------
     const lightbox = document.getElementById('photoLightbox');
     const lightboxImg = document.getElementById('lightboxImg');
@@ -303,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Close on Escape key (modal + lightbox)
+    // Close on Escape key (modals + lightbox)
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             if (lightbox.classList.contains('open')) {
@@ -312,6 +335,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (projectModal.classList.contains('open')) {
                 projectModal.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+            if (photoClubModal.classList.contains('open')) {
+                photoClubModal.classList.remove('open');
                 document.body.style.overflow = '';
             }
         }
