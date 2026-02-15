@@ -1,36 +1,456 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Gifford Gabriel Sam — Aspiring Software Developer | Portfolio showcasing education, projects, and photography.">
+
+    <!-- Page Title -->
     <title>Gifford Sam | Portfolio</title>
+
+    <!-- Google Fonts: Inter + Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Gifford Gabriel Sam</h1>
-    <p>Aspiring Software Developer</p>
+    <!-- ===== NAVIGATION BAR (fixed at top) ===== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <!-- Logo / Brand -->
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>GS<span class="logo-bracket"> /&gt;</span>
+            </a>
 
-    <h2>About Me</h2>
-    <p>
-        I am a Diploma in Business & Financial Technology student at Nanyang Polytechnic
-        with experience in full-stack development using Python, Flask, SQL, HTML, CSS, and JavaScript.
-    </p>
+            <!-- Nav Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#photography" class="nav-link">Photography</a></li>
+                <li><a href="#contact" class="nav-link">Contact Me</a></li>
+            </ul>
 
-    <h2>Projects</h2>
+            <!-- Mobile Hamburger Menu -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
 
-    <h3>BridgeConnect — Intergenerational Community Platform</h3>
-    <p>
-        Full-stack web application built using Flask, SQLite, HTML, CSS, Bootstrap, and JavaScript.
-        Includes authentication, CRUD operations, and responsive UI.
-    </p>
+    <!-- ===== HOME / HERO SECTION (centred, no image) ===== -->
+    <section id="home" class="hero-section">
+        <!-- Animated background particles -->
+        <div class="hero-particles" id="particles"></div>
 
-    <h2>Contact</h2>
-    <p>
-        GitHub: https://github.com/sam-gifford<br>
-        LinkedIn: www.linkedin.com/in/gifford-sam<br>
-        Email: ssam31134@gmail.com
-    </p>
+        <div class="hero-content hero-content--centred">
+            <div class="hero-text hero-text--centred">
+                <p class="hero-greeting animate-on-scroll">Hello, I'm</p>
+                <h1 class="hero-name animate-on-scroll">Gifford Gabriel<br><span class="name-highlight">Sam</span></h1>
+                <div class="typing-wrapper animate-on-scroll">
+                    <span class="typing-label">I am an&nbsp;</span>
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-description animate-on-scroll">
+                    A passionate Diploma in Business &amp; Financial Technology student at Nanyang Polytechnic,
+                    blending technology with business insights to build meaningful digital solutions.
+                </p>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#education" class="btn btn-outline">Explore More</a>
+                </div>
 
+                <!-- Social icons -->
+                <div class="hero-socials animate-on-scroll">
+                    <a href="https://github.com/sam-gifford" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/gifford-sam" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/sam__gifford/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll-down indicator -->
+        <a href="#education" class="scroll-indicator" aria-label="Scroll down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </a>
+    </section>
+
+    <!-- ===== EDUCATION SECTION ===== -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <!-- Section heading -->
+            <div class="section-header animate-on-scroll">
+                <p class="section-subtitle">My Journey</p>
+                <h2 class="section-title">Education</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Education Timeline -->
+            <div class="timeline">
+                <!-- NYP -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025 – 2028</span>
+                        <h3 class="timeline-title">Nanyang Polytechnic</h3>
+                        <p class="timeline-subtitle">Diploma in Business &amp; Financial Technology</p>
+                        <p class="timeline-detail">Relevant Coursework: Programming, Database Design &amp;
+                            Administration, Web Development, UX Design, AI &amp; Data Analytics, Network Technologies
+                        </p>
+                        <div class="skills-container">
+                            <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                            <span class="skill-tag"><i class="fas fa-flask-vial"></i> Flask</span>
+                            <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                            <span class="skill-tag"><i class="fab fa-html5"></i> HTML</span>
+                            <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                            <span class="skill-tag"><i class="fab fa-js-square"></i> JavaScript</span>
+                            <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Catholic High Secondary -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020 – 2024</span>
+                        <h3 class="timeline-title">Catholic High School (Secondary)</h3>
+                        <p class="timeline-detail">CCA: Choir</p>
+                        <p class="timeline-detail">Leadership Positions: Head of Admin (Choir), Senior Prefect</p>
+                    </div>
+                </div>
+
+                <!-- Catholic High Primary -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2015 – 2020</span>
+                        <h3 class="timeline-title">Catholic High School (Primary)</h3>
+                        <p class="timeline-detail">Academic Awards: Good Progress Award (2019, 2020), EAGLES Award
+                            (2020)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Project Card -->
+            <div class="edu-card project-card animate-on-scroll" style="margin-top: 48px;">
+                <div class="edu-card-header">
+                    <div class="edu-icon project-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="edu-period">
+                        <span class="edu-badge project-badge">Featured Project</span>
+                    </div>
+                </div>
+
+                <h3 class="edu-title">BridgeConnect</h3>
+                <p class="edu-degree">Intergenerational Community Platform</p>
+                <p class="edu-description">
+                    Full-stack web application built with Flask, SQLite, HTML, CSS, Bootstrap, and JavaScript.
+                    Features authentication, CRUD operations, and a responsive, accessible UI.
+                </p>
+
+                <div class="skills-container">
+                    <span class="skill-tag"><i class="fab fa-python"></i> Flask</span>
+                    <span class="skill-tag"><i class="fas fa-database"></i> SQLite</span>
+                    <span class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                    <span class="skill-tag"><i class="fab fa-js-square"></i> JavaScript</span>
+                </div>
+
+                <button class="btn btn-outline btn-view-project" id="openProjectModal">
+                    <span>View Details</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WORK EXPERIENCE SECTION ===== -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <p class="section-subtitle">Where I've Worked</p>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- Suncare SG -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 – Present</span>
+                        <h3 class="timeline-title">Volunteer Tutor</h3>
+                        <p class="timeline-subtitle">Suncare SG</p>
+                        <ul class="timeline-list">
+                            <li>Provided academic support to disadvantaged students</li>
+                            <li>Helped students improve understanding and academic performance</li>
+                            <li>Strengthened communication and mentoring skills</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Saizeriya -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024</span>
+                        <h3 class="timeline-title">Server</h3>
+                        <p class="timeline-subtitle">Saizeriya, Singapore</p>
+                        <ul class="timeline-list">
+                            <li>Delivered customer service in a fast-paced environment</li>
+                            <li>Collaborated effectively with team members to maintain operational efficiency</li>
+                            <li>Developed strong time management with multitasking abilities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PHOTOGRAPHY SECTION ===== -->
+    <section id="photography" class="section photography-section">
+        <div class="container">
+            <!-- Section heading -->
+            <div class="section-header animate-on-scroll">
+                <p class="section-subtitle">Through My Lens</p>
+                <h2 class="section-title">Photography</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Photography Carousel -->
+            <div class="carousel animate-on-scroll" id="photoCarousel">
+                <!-- Carousel viewport -->
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide active">
+                            <img src="images/2T3A8659.jpg" alt="Photography by Gifford — Moment captured">
+                            <div class="carousel-caption">
+                                <h4>Captured Moment</h4>
+                                <p>A fleeting instant preserved through the lens — light, shadow, and emotion.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide">
+                            <img src="images/IMG_6484.jpg" alt="Photography by Gifford — Natural scenery">
+                            <div class="carousel-caption">
+                                <h4>Nature's Palette</h4>
+                                <p>Exploring the vivid colours and textures found in the world around us.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide">
+                            <img src="images/IMG_6982.jpg" alt="Photography by Gifford — Urban exploration">
+                            <div class="carousel-caption">
+                                <h4>Urban Exploration</h4>
+                                <p>The rhythm of city life — architecture, people, and stories waiting to be told.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arrow controls -->
+                <button class="carousel-btn carousel-btn-prev" id="carouselPrev" aria-label="Previous photo">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-btn-next" id="carouselNext" aria-label="Next photo">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Dot indicators -->
+                <div class="carousel-dots" id="carouselDots">
+                    <button class="carousel-dot active" aria-label="Go to slide 1"></button>
+                    <button class="carousel-dot" aria-label="Go to slide 2"></button>
+                    <button class="carousel-dot" aria-label="Go to slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ME SECTION ===== -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <!-- Section heading -->
+            <div class="section-header animate-on-scroll">
+                <p class="section-subtitle">Let's Connect</p>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/mwvnoqyl" method="POST">
+                        <!-- Name field -->
+                        <div class="form-group">
+                            <label for="nameInput">Your Name</label>
+                            <input type="text" id="nameInput" name="name" placeholder="John Doe" required>
+                            <span class="input-highlight"></span>
+                        </div>
+
+                        <!-- Email field -->
+                        <div class="form-group">
+                            <label for="emailInput">Your Email</label>
+                            <input type="email" id="emailInput" name="email" placeholder="john@example.com" required>
+                            <span class="input-highlight"></span>
+                        </div>
+
+                        <!-- Message field -->
+                        <div class="form-group">
+                            <label for="messageInput">Your Message</label>
+                            <textarea id="messageInput" name="message" rows="5" placeholder="Write your message here..."
+                                required></textarea>
+                            <span class="input-highlight"></span>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+
+                        <!-- Success message (hidden by default) -->
+                        <div class="form-success" id="formSuccess">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Message sent successfully! I'll get back to you soon.</p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Info (no illustration) -->
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>ssam31134@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Singapore</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social links -->
+                    <div class="contact-socials">
+                        <a href="https://github.com/sam-gifford" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/gifford-sam" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.instagram.com/sam__gifford/" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BRIDGECONNECT MODAL ===== -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeProjectModal" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="images/image.png" alt="BridgeConnect — application screenshot">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-badge">Featured Project</span>
+                    <h2 class="modal-title">BridgeConnect</h2>
+                    <p class="modal-subtitle">Intergenerational Community Platform</p>
+                    <p class="modal-description">
+                        BridgeConnect is a full-stack web application designed to foster
+                        meaningful connections between different generations. Built with
+                        <strong>Flask</strong> and <strong>SQLite</strong> on the back-end,
+                        it features secure user authentication, full CRUD operations for
+                        community posts, and a responsive UI powered by
+                        <strong>Bootstrap</strong> and vanilla <strong>JavaScript</strong>.
+                    </p>
+                    <p class="modal-description">
+                        The platform enables seniors and youth to share skills, stories,
+                        and experiences through an accessible, intuitive interface that
+                        prioritises ease of use for all age groups.
+                    </p>
+                    <div class="modal-tech">
+                        <span class="skill-tag"><i class="fab fa-python"></i> Flask</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> SQLite</span>
+                        <span class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                        <span class="skill-tag"><i class="fab fa-js-square"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#home" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>GS<span class="logo-bracket"> /&gt;</span>
+                </a>
+                <p class="footer-text">&copy; 2026 Gifford Gabriel Sam. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/sam-gifford" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/gifford-sam" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/sam__gifford/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== PHOTO LIGHTBOX ===== -->
+    <div class="lightbox-overlay" id="photoLightbox">
+        <button class="lightbox-close" id="closeLightbox" aria-label="Close lightbox">
+            <i class="fas fa-times"></i>
+        </button>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="Enlarged photo">
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
 </body>
 
 </html>
